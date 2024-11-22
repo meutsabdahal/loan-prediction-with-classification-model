@@ -25,7 +25,6 @@ credit_score = st.number_input('Credit Score: ', value=None)
 previous_loan_defaults_on_file = st.selectbox('Previous Loan Defaults: ', encoders['previous_loan_defaults_on_file'].classes_)
 
 loan_percent_income = loan_amnt / person_income 
-loan_to_income = loan_amnt / person_income 
 income_to_loan = person_income / loan_amnt 
 net_disposable_income = person_income - (loan_amnt * loan_int_rate / 100)
 
@@ -43,14 +42,13 @@ encoded_data = {
     'loan_percent_income': loan_percent_income, 
     'cb_person_cred_hist_length': cb_person_cred_hist_length,
     'credit_score': credit_score, 
-    'previous_loan_defaults_on_file': encoders['previous_loan_defaults_on_file'].transform([previous_loan_defaults_on_file])[0],    
-    'loan_to_income': loan_to_income, 
+    'previous_loan_defaults_on_file': encoders['previous_loan_defaults_on_file'].transform([previous_loan_defaults_on_file])[0],     
     'income_to_loan': income_to_loan, 
     'net_disposable_income': net_disposable_income 
 }
 
 predict_df = pd.DataFrame([encoded_data])
-scaler = ['person_age', 'person_income', 'loan_amnt', 'loan_int_rate', 'cb_person_cred_hist_length', 'credit_score', 'loan_to_income', 'income_to_loan', 'net_disposable_income']
+scaler = ['person_age', 'person_income', 'loan_amnt', 'loan_int_rate','loan_percent_income', 'cb_person_cred_hist_length', 'credit_score', 'income_to_loan', 'net_disposable_income']
 # scaler = StandardScaler()
 predict_df[scaler] = StandardScaler().fit_transform(predict_df[scaler])
 
