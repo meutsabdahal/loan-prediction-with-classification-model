@@ -14,31 +14,31 @@ This project predicts loan approval status using machine learning classification
 
 ## EDA
 1. Loan Status According to Gender
-![alt text]![alt text](charts/loan_status_gender.png)
+![alt text](charts/loan_status_gender.png)
 
 2. Loan Status According to Education Qualification
-![alt text]![alt text](charts/loan_status_education.png)
+![alt text](charts/loan_status_education.png)
 
 3. Loan Status According to Loan Intent
-![alt text]![alt text](charts/oan_status_intent.png)
+![alt text](charts/loan_status_intent.png)
 
 4. Age Range
-![alt text]![alt text](charts/age_range.png)
+![alt text](charts/age_range.png)
 
 5. Income Range
-![alt text]![alt text](charts/income_range.png)
+![alt text](charts/income_range.png)
 
 6. Loan Range
-![alt text]![alt text](charts/loan_range.png)
+![alt text](charts/loan_range.png)
 
 7. Credit Range
-![alt text]![alt text](charts/credit_range.png)
+![alt text](charts/credit_range.png)
 
 8. Income vs Loan Amount
-![alt text]![alt text](charts/income_vs_loan.png)
+![alt text](charts/income_vs_loan.png)
 
 9. HeatMap
-![alt text]![alt text](charts/heatmap.png)
+![alt text](charts/heatmap.png)
 
 ## Data Processing
     1. Label Encoding is performed for categorical data
@@ -50,6 +50,6 @@ This project predicts loan approval status using machine learning classification
     3. Random Forest Classifier is used for trainning
         - Accuracy: 93.21% and Cross Validation: 92.54%
     4. Hyperparameter Tunning using GridSearchCV
-        - Accuracy: 93.21% and Cross Validation: 92.54%
+        - Accuracy: 93.35% and Cross Validation: 92.67%
     5. Model Evaluation is performed classification Report and Confusion Matrix
-    ![alt text]![alt text](confusion_matrix.png)
+![alt text](charts/confusion_matrix.png)
